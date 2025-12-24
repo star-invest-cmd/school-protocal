@@ -1,269 +1,230 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>School Protocol portal Website — Ghana SHS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg-blur: rgba(255,255,255,0.08);
-      --glass: rgba(255,255,255,0.12);
-      --text: #0b1221;
-      --text-light: #2c3a55;
-      --brand: #1a7cff;
-      --brand-2: #7c3aed;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: var(--text);
-      background: #0a0f1f;
-    }
-    body::before{
-      content: "";
-      position: fixed;
-      inset: 0;
-      background:
-        linear-gradient(rgba(10, 15, 31, 0.55), rgba(10, 15, 31, 0.55)),
-        url('ab.png') center/cover no-repeat fixed;
-      filter: blur(4px) brightness(0.85);
-      transform: scale(1.05);
-      z-index: -2;
-    }
-    body::after{
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      z-index: -1;
-    }
-    .container{
-      width: min(1100px, 92vw);
-      margin: 24px auto 80px;
-    }
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 18px 20px; gap: 12px;
-      background: var(--glass);
-      border-radius: 18px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-    .logo{ display:flex; align-items:center; gap:12px; font-weight:700; }
-    .logo-badge{
-      width:38px; height:38px; border-radius:10px;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      display:grid; place-items:center; color:#fff; font-weight:800;
-    }
-    .tag{
-      font-size:12px; padding:6px 10px; border-radius:999px;
-      background: var(--bg-blur);
-      color:#f0f6ff;
-    }
-    h1{ color:#ecf3ff; }
-    .sub{ color:#cdd9ff; }
-    .grid{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    }
-    .card{
-      padding: 18px; border-radius: 18px;
-      background: radial-gradient(120% 140% at 100% 0%, #ffffff15, #ffffff08 60%);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .card h3{ color:#f5f9ff; }
-    .fee{ color:#d7e3ff; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px; font-weight:600; cursor:pointer;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#fff;
-    }
-    .page{ display:none; }
-    .page.active{ display:block; }
-    form{
-      display:grid; gap:16px; padding: 18px; background: var(--glass);
-      border-radius:18px;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    label{ color:#e8f0ff; font-size:14px; }
-    input, select{
-      width:100%; padding:12px 14px; border-radius:12px;
-      background: #0f1730; color:#eaf2ff; font-size:14px; border: none;
-    }
-    .actions{ display:flex; gap:12px; flex-wrap:wrap; }
-    .ghost{ background: transparent; border:1px solid #ffffff33; color:#eaf2ff; }
-    .notice{ background:#0f2a1e; color:#b9ffe4; border:1px solid #1a6a4f; padding:12px; border-radius:12px; }
-    .id-card{
-      margin-top: 18px; padding: 22px; border-radius: 18px;
-      border:1px dashed #9ac1ff55; background: linear-gradient(135deg, #ffffff0d, #ffffff06);
-      color:#ecf3ff;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Hubert Seminary SHS - Official Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero / Header Section */
+        .hero {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(26, 95, 122, 0.9)), 
+                        url('https://images.unsplash.com/photo-1541339907198-e08759dfc3f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* History & Info Section */
+        .info-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: -50px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 { color: #1a5f7a; border-bottom: 3px solid #f1c40f; display: inline-block; margin-bottom: 20px; }
+
+        /* Login Portal Styling */
+        .login-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(26, 95, 122, 0.2);
+            text-align: center;
+            border-top: 5px solid #1a5f7a;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .btn-login {
+            background-color: #1a5f7a;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover { background-color: #f1c40f; color: #1a5f7a; }
+
+        /* Result Page Styling */
+        #report-display {
+            display: none;
+            background: white;
+            padding: 50px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.2);
+        }
+
+        .report-header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 15px; margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #333; padding: 10px; text-align: center; font-size: 14px; }
+        .no-border td { border: none; text-align: left; padding: 5px; }
+        .error { color: #e74c3c; display: none; margin-bottom: 15px; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .info-section { grid-template-columns: 1fr; }
+            .hero { padding: 40px 10px; }
+        }
+
+        @media print {
+            .hero, .info-section, .login-box, button, #home-page { display: none !important; }
+            #report-display { display: block !important; box-shadow: none; margin: 0; width: 100%; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <div class="logo-badge">SP</div>
-        <div>
-          <div style="color:#eaf2ff"> G.E.S. School Protocol Portal</div>
-          <div class="tag">Ghana SHS • Category A</div>
+
+    <div id="home-page">
+        <header class="hero">
+            <h1>ST. HUBERT SEMINARY SENIOR HIGH SCHOOL</h1>
+            <p style="font-size: 1.2em; font-style: italic;">"Sanctity and Service" — Kumasi, Ghana</p>
+        </header>
+
+        <div class="container">
+            <div class="info-section">
+                <div class="card">
+                    <h2>History of the Institution</h2>
+                    <p>
+                        St. Hubert Seminary Senior High School was established in <strong>October 1970</strong> by the late Rt. Rev. Peter Akwasi Sarpong, then Bishop of the Catholic Diocese of Kumasi. The institution was originally conceived as a minor seminary to nurture young men with an interest in the Catholic priesthood, combining rigorous academic training with deep spiritual formation.
+                    </p>
+                    <p>
+                        For many years, the school operated as a private mission institution, gaining a reputation across the Ashanti Region for its strict discipline and high moral standards. In <strong>2005</strong>, a significant milestone was reached when the school was formally absorbed into the public education system by the Ghana Education Service (GES). This transition allowed the school to expand its facilities and offer a broader range of academic programs, including General Science, General Arts, and Business.
+                    </p>
+                    <p>
+                        Today, St. Hubert Seminary SHS stands as one of the premier Category 'A' schools in Ghana. It consistently produces outstanding results in the West African Senior School Certificate Examination (WASSCE) and excels in extracurricular activities like debating and sports. While it now welcomes a diverse student body, it proudly maintains its Catholic heritage, continuing to produce graduates who are not only intellectually capable but also morally upright leaders serving in various sectors of Ghanaian society.
+                    </p>
+                </div>
+
+                <div class="side-column">
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h2>Contact Info</h2>
+                        <p><strong>Location:</strong> Santasi, Kumasi, Ashanti Region</p>
+                        <p><strong>Postal:</strong> P.O. BOX KS 1302, Kumasi</p>
+                        <p><strong>Email:</strong> sthubertsmshs@gmail.com</p>
+                    </div>
+
+                    <div class="login-box">
+                        <h3>Student Portal</h3>
+                        <p>Access your Semester 2 Results</p>
+                        <div id="error-msg" class="error">Access Denied: Invalid Credentials.</div>
+                        <input type="text" id="admNum" placeholder="Admission Number (2401190487)">
+                        <input type="password" id="accessCode" placeholder="Access Code (572666)">
+                        <button class="btn-login" onclick="checkLogin()">Sign In</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </header>
+    </div>
 
-    <!-- HOME PAGE -->
-    <section id="home" class="page active">
-      <h1>Select Your SHS (Category A)</h1>
-      <p class="sub">Choose a school to start the protocol application.</p>
-      <div id="schoolsGrid" class="grid"></div>
-    </section>
-
-    <!-- APPLY PAGE -->
-    <section id="apply" class="page">
-      <h1>Protocol Application Form</h1>
-      <div id="selectedSchoolBox" class="notice">No school selected yet.</div>
-      <form id="appForm">
-        <div><strong><label>Your Name Full Name</label></strong><input name="fullname" required></div>
-        <div><strong><label>Index Number</label></strong><input name="index" maxlength="12" required></div>
-        <div><strong><label>Age</label></strong><input type="number" name="age" required></div>
-        <div><strong><label>School You Attended (JHS)</label></strong><input name="jhs" required></div>
-        <div><strong><label>The SHS School You Had(SHS)</label></strong><input name="shs" required></div>
-        <div>
-          <strong><label>Boarder or Day</label></strong>
-          <select name="status" required>
-            <option value="">Select option</option>
-            <option>Boarder</option>
-            <option>Day</option>
-          </select>
+    <div id="report-display" class="container">
+        <div class="report-header">
+            <h2 style="margin:0;">ST. HUBERT SEMINARY SENIOR HIGH SCHOOL</h2>
+            <p style="margin:5px;">P.O. BOX KS 1302, KUMASI | TEL: 0322022575</p>
+            <h3 style="background:#1a5f7a; color:white; padding:5px; margin-top:10px;">STUDENT PERFORMANCE REPORT</h3>
         </div>
-        <div>
-          <strong><label>Course you would want to do</label></strong>  
-          <select name="course" required>
-            <option value="">Select option</option>
-            <option>General Science</option>
-            <option>General Art</option>
-            <option>Visual Art</option>
-            <option>Home Economics</option>
-            <option>Business</option>
-          </select>
+
+        <table class="no-border">
+            <tr>
+                <td><b>STUDENT:</b> ATIAH, ABRAHAM</td>
+                <td><b>ADMISSION NO:</b> 2401190487</td>
+            </tr>
+            <tr>
+                <td><b>CLASS:</b> 1 SCIENCE 5</td>
+                <td><b>SEMESTER:</b> 2 (2024-2025)</td>
+            </tr>
+            <tr>
+                <td><b>POSITION:</b> 25th</td>
+                <td><b>CLASS SIZE:</b> 51</td>
+            </tr>
+        </table>
+
+        <table>
+            <thead>
+                <tr style="background: #f2f2f2;">
+                    <th>Subject</th>
+                    <th>Class (30)</th>
+                    <th>Exam (70)</th>
+                    <th>Total (100)</th>
+                    <th>Grade</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>ADDITIONAL MATH</td><td>20.0</td><td>45.0</td><td>32.0</td><td>B3</td><td>GOOD</td></tr>
+                <tr><td>ENGLISH LANGUAGE</td><td>20.0</td><td>39.7</td><td>50.7</td><td>C6</td><td>CREDIT</td></tr>
+                <tr><td>CORE MATHEMATICS</td><td>25.5</td><td>45.0</td><td>50.5</td><td>C6</td><td>CREDIT</td></tr>
+                <tr><td>SOCIAL STUDIES</td><td>15.0</td><td>49.0</td><td>64.0</td><td>B3</td><td>GOOD</td></tr>
+                <tr><td>BIOLOGY (Elective)</td><td>55.0</td><td>38.5</td><td>56.5</td><td>C6</td><td>CREDIT</td></tr>
+                <tr><td>CHEMISTRY (Elective)</td><td>65.5</td><td>40.8</td><td>64.3</td><td>B3</td><td>GOOD</td></tr>
+                <tr><td>GEOGRAPHY (Elective)</td><td>23.5</td><td>44.8</td><td>68.4</td><td>B3</td><td>GOOD</td></tr>
+                <tr><td>ICT (ELECTIVE)</td><td>25.0</td><td>51.0</td><td>76.0</td><td>A1</td><td>EXCELLENT</td></tr>
+                <tr><td>PHYSICS (Elective)</td><td>25.5</td><td>71.0</td><td>38.5</td><td>B2</td><td>VERY GOOD</td></tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px;">
+            <p><strong>Aggregate Raw Score:</strong> 660.5 / 900</p>
+            <p><strong>Headmaster's Remark:</strong> Quite satisfactory, work harder and improve upon it.</p>
         </div>
-        <div><label>BECE Grade</label><input name="grade" required></div>
-        <div class="actions">
-          <button type="button" class="btn ghost" onclick="setPage('#home')">Back</button>
-          <button type="submit" class="btn">Proceed</button>
+        
+        <div style="margin-top: 30px; text-align: center;">
+            <button onclick="window.print()" style="background:#1a5f7a; color:white; padding:10px 20px; border:none; cursor:pointer;">Download PDF / Print</button>
+            <button onclick="location.reload()" style="background:#666; color:white; padding:10px 20px; border:none; cursor:pointer; margin-left:10px;">Sign Out</button>
         </div>
-      </form>
-    </section>
+    </div>
 
-    <!-- ID PAGE -->
-    <section id="ticket" class="page">
-      <h1>Application ID Generated</h1>
-      <div class="id-card" id="idCard"></div>
-    </section>
-  </div>
+    <script>
+        function checkLogin() {
+            const adm = document.getElementById('admNum').value;
+            const code = document.getElementById('accessCode').value;
+            const error = document.getElementById('error-msg');
 
-  <script>
-    const schools = [
-      { name: "PRESEC – Legon", fee: 4800 },
-      { name: "Achimota School", fee: 5200 },
-      { name: "Wesley Girls' High School", fee: 5600 },
-      { name: "Holy Child School", fee: 5050 },
-      { name: "St. Louis SHS", fee: 4900 },
-      { name: "Aburi Girls' SHS", fee: 5400 },
-      { name: "Yaa Asantewaa Girls' SHS", fee: 4600 },
-      { name: "Mfantsiman Girls' SHS", fee: 5300 },
-      { name: "St. Mary's SHS", fee: 4100 },
-      { name: "Adisadel College", fee: 5700 },
-      { name: "Mfantsipim School", fee: 5200 },
-      { name: "St. Augustine's College", fee: 5000 },
-      { name: "Prempeh College", fee: 5900 },
-      { name: "Opoku Ware School", fee: 5400 },
-      { name: "St. Peter's SHS (PERSCO)", fee: 4200 },
-      { name: "Pope John SHS & Minor Seminary", fee: 5000 },
-      { name: "Bishop Herman College", fee: 4800 },
-      { name: "Tamale Senior High School", fee: 1400 },
-      { name: "Ghana National College", fee: 2000 },
-      { name: "Accra Academy", fee: 3500 },
-      { name: "St James Minor Seminary", fee: 7000 },
-      { name: "Bolgatanga Girls", fee: 1000 },
-      { name: "St Hubert Minor Seminary ", fee: 2500 }, 
-    ];
-    let selectedSchool = null;
-
-    function setPage(hash){
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.querySelector(hash).classList.add('active');
-    }
-    function renderSchools(){
-      const grid = document.getElementById('schoolsGrid');
-      grid.innerHTML = '';
-      schools.forEach((s, i) => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <h3>${s.name}</h3>
-          <div class="fee">Protocol Fee: GHS ${s.fee}</div>
-          <button class="btn" onclick="selectSchool(${i})">Apply Protocol</button>
-        `;
-        grid.appendChild(card);
-      });
-    }
-    function selectSchool(i){
-      selectedSchool = schools[i];
-      document.getElementById('selectedSchoolBox').innerHTML =
-        `Selected School: <strong>${selectedSchool.name}</strong> • Fee: GHS ${selectedSchool.fee}`;
-      setPage('#apply');
-    }
-    function generateTriple(){ return Math.floor(100 + Math.random() * 900); }
-
-    // Restrict input while typing
-    document.addEventListener('input', function(e) {
-      if (e.target.name === 'index') {
-        e.target.value = e.target.value.replace(/\D/g, '').slice(0, 12); // Only numbers, max length 12
-      }
-      if (e.target.name === 'grade') {
-        e.target.value = e.target.value.replace(/\D/g, ''); // Only numbers
-        if (Number(e.target.value) > 54) e.target.value = '54'; // Max 54
-      }
-    });
-
-    document.getElementById('appForm').addEventListener('submit', e => {
-      e.preventDefault();
-
-      const indexNumber = document.querySelector('input[name="index"]').value.trim();
-      const gradeValue = document.querySelector('input[name="grade"]').value.trim();
-
-      if (!/^\d{12}$/.test(indexNumber)) {
-        alert("Index Number must be exactly 12 digits and contain only numbers.");
-        return;
-      }
-
-      const gradeNum = Number(gradeValue);
-      if (isNaN(gradeNum) || gradeNum < 0 || gradeNum > 54) {
-        alert("Grade must be a number between 0 and 54.");
-        return;
-      }
-
-      const triple = generateTriple();
-      const id = `SP-${triple}`;
-      document.getElementById('idCard').innerHTML =
-        `Your ID: <strong>${id}</strong><br>Chat <strong>+233 539882710</strong> on WhatsApp to proceed the student protocol <strong>Example: </strong>you go to whatsapp and chat this number 0539882710 and say hi my name is <strong>JOHN OFORI</strong>, I choose <strong>PRESEC LEGON</strong> and my id generated is <strong>Sp-231.</strong>you do this to make it easier for the next stage of the protocal and payment process to finish .`;
-      setPage('#ticket');
-    });
-
-    renderSchools();
-  </script>
+            // Secure validation for specified user
+            if (adm === "2401190487" && code === "572666") {
+                document.getElementById('home-page').style.display = 'none';
+                document.getElementById('report-display').style.display = 'block';
+                window.scrollTo(0,0);
+            } else {
+                error.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
